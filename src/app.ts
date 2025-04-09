@@ -76,11 +76,7 @@ app.post('/logout', (_req, res) => {
 
 app.use("/api", apiRouter);
 app.use(express.static(path.resolve(__dirname, "..", "public")));
-app.use((req, res) => {
-    if (!req.url.includes('404.html')) {
-      res.redirect("404.html");
-    } else {
-      res.status(404).send("Not Found"); // Or handle it differently
-    }
-  });
+app.use((_, res) => {
+    res.redirect("404.html");
+});
 
