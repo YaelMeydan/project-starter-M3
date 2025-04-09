@@ -4,20 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INT Fullstack November 2024</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>My Book Club</title>
+    <link rel="stylesheet" href="../styles.css" />
 </head>
 
 <body>
     <main>
-        <pre id="app"></pre>
-    </main>
 
-    <script type="module">
-        import { initApp } from "./index.js";
+        <div class="container">
+            <header>
+                <h1>My Book Club</h1>
+                <p>Welcome to our community of book lovers! Discover new reads, share your collection, and discuss your favorite books.</p>
+            </header>
 
-        initApp(document.getElementById("app"));
-    </script>
+            <main>
+                <div id="message-container"></div>
+
+                <form id="login-form">
+                    <h2>Login</h2>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <button type="submit" class="btn primary">Login</button>
+                </form>
+
+                
+                <a href="register/register.html"><button id="register-button" class="btn secondary">Register</button></a>
+           
+   </main>
+         <footer>
+                <p>&copy; 2025 My Book Club</p>
+         </footer>
+   </div>     
+
+         <script type="module">
+           import { initApp  , login } from "./index.js";
+
+            initApp(document.getElementById("app"));
+            document.forms.namedItem("login").addEventListener("submit", login);
+
+          </script>
+
 </body>
 
 </html>

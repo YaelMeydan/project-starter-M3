@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book Club - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>My Book Club</h1>
+            <nav>
+                <button id="logout-button" class="btn secondary">Logout</button>
+            </nav>
+        </header>
+
+        <main>
+            <div id="message-container"></div>
+
+            <div class="toggle-container">
+                <button id="collection-toggle" class="btn toggle active">My Collection</button>
+                <button id="community-toggle" class="btn toggle">Community</button>
+            </div>
+
+            <div id="collection-view">
+                <h2>My Book Collection</h2>
+                <button id="add-book-button" class="btn primary">Add a Book</button>
+                <div id="add-book-form-container"></div>
+                <div id="book-list-container"></div>
+            </div>
+
+            <div id="community-view" style="display: none;">
+                <h2>Community Library</h2>
+                <div id="community-book-list-container"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Book Club</p>
+        </footer>
+    </div>
+    <script type="module">
+        import { initApp } from "./index.js";
+
+        initApp(document.getElementById("app"));
+    </script>
+
+</body>
+
+</html>
