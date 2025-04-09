@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Book Club</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -40,13 +40,13 @@
          </footer>
    </div>     
 
-         <script type="module">
-           import { initApp  , login } from "./index.js";
+         <script type="module" src="index.js">
+           import { initApp  , handleLogin } from "./index.js";
 
             initApp(document.getElementById("app"));
-            document.forms.namedItem("login").addEventListener("submit", login);
 
           </script>
+
 
 </body>
 
