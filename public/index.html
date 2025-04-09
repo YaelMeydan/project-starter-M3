@@ -20,7 +20,7 @@
             <main>
                 <div id="message-container"></div>
 
-                <form id="login-form">
+                <form name="login" id="login-form">
                     <h2>Login</h2>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
@@ -39,13 +39,8 @@
                 <p>&copy; 2025 My Book Club</p>
          </footer>
    </div>     
-
-         <script type="module" src="index.js">
-           import { initApp  , handleLogin } from "./index.js";
-
-            initApp(document.getElementById("app"));
-
-          </script>
+     
+   <script type="module" src="index.ts"></script>
 
 
 </body>
